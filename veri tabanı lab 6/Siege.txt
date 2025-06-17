@@ -1,0 +1,49 @@
+fatih@fthozkctn:/mnt/c/Users/fatih$ siege -H "Accept: application/json" -c10 -r100 "http://172.23.96.1:8080/nosql-lab-hz/ogrenci_r/2025000001" > hazelcast.results
+
+fatih@fthozkctn:/mnt/c/Users/fatih$ cat hazelcast.results
+{       "transactions":                         1000,
+        "availability":                       100.00,
+        "elapsed_time":                         0.28,
+        "data_transferred":                     0.05,
+        "response_time":                        0.00,
+        "transaction_rate":                  3571.43,
+        "throughput":                           0.16,
+        "concurrency":                          9.46,
+        "successful_transactions":                 0,
+        "failed_transactions":                     0,
+        "longest_transaction":                  0.01,
+        "shortest_transaction":                 0.00
+}
+fatih@fthozkctn:/mnt/c/Users/fatih$ siege -H "Accept: application/json" -c10 -r100 "http://172.23.96.1:8080/nosql-lab-rd/ogrenci_r/2
+025000001" > redis.results
+
+fatih@fthozkctn:/mnt/c/Users/fatih$ cat redis.results
+{       "transactions":                         1000,
+        "availability":                       100.00,
+        "elapsed_time":                         0.20,
+        "data_transferred":                     0.05,
+        "response_time":                        0.00,
+        "transaction_rate":                  5000.00,
+        "throughput":                           0.23,
+        "concurrency":                          9.35,
+        "successful_transactions":                 0,
+        "failed_transactions":                     0,
+        "longest_transaction":                  0.01,
+        "shortest_transaction":                 0.00
+}
+fatih@fthozkctn:/mnt/c/Users/fatih$ siege -H "Accept: application/json" -c10 -r100 "http://172.23.96.1:8080/nosql-lab-mg/ogrenci_r/2025000001" > mongodb.results
+
+fatih@fthozkctn:/mnt/c/Users/fatih$ cat mongodb.results
+{       "transactions":                         1000,
+        "availability":                       100.00,
+        "elapsed_time":                         0.29,
+        "data_transferred":                     0.05,
+        "response_time":                        0.00,
+        "transaction_rate":                  3448.28,
+        "throughput":                           0.16,
+        "concurrency":                          9.17,
+        "successful_transactions":                 0,
+        "failed_transactions":                     0,
+        "longest_transaction":                  0.03,
+        "shortest_transaction":                 0.00
+}
