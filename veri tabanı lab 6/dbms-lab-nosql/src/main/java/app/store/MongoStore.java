@@ -11,8 +11,8 @@ public class MongoStore {
     static Gson gson = new Gson();
 
     public static void init() {
-        // 🔧 HATALIYDI: MongoClient mongoClient = ... 
-        // ✅ DOĞRU: Static değişken olan client'e atıyoruz
+      
+        // Static değişken olan client'e atıyoruz
         client = MongoClients.create("mongodb://admin:admin@localhost:27017/?authSource=admin");
 
         // MongoDB'ye bağlan
